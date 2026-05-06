@@ -17,7 +17,7 @@ export function Footer() {
             {SITE.weddingDateRoman}
           </div>
         </div>
-        <div style={{ textAlign: "right" }}>
+        <div className="footer-right">
           <div className="eyebrow" style={{ marginBottom: 8 }}>The Reception</div>
           <div className="italic" style={{ fontSize: 16 }}>
             {SITE.reception.name} · {SITE.reception.cocktails}
