@@ -46,4 +46,6 @@ next-env.d.ts
 *-hero.png
 *-mid.png
 home-*.png
+mobile-*.png
+tablet-*.png
 .env.local

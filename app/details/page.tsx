@@ -41,14 +41,7 @@ export default function DetailsPage() {
         </FadeIn>
 
         <Stagger>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: 32,
-              marginBottom: 80,
-            }}
-          >
+          <div className="grid-2" style={{ gap: 32, marginBottom: 80 }}>
             <StaggerItem>
               <div
                 className="img-ph"
@@ -169,11 +162,8 @@ export default function DetailsPage() {
                 {SCHEDULE.map(([time, title, sub], i) => (
                   <StaggerItem key={time}>
                     <div
+                      className="schedule-row"
                       style={{
-                        display: "grid",
-                        gridTemplateColumns: "120px 1fr auto",
-                        gap: 32,
-                        alignItems: "baseline",
                         padding: "20px 0",
                         borderBottom:
                           i === SCHEDULE.length - 1
@@ -208,17 +198,12 @@ export default function DetailsPage() {
 
         <FadeIn>
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: 80,
-              alignItems: "center",
-              marginBottom: 80,
-            }}
+            className="grid-2 grid-2-wide"
+            style={{ marginBottom: 80 }}
           >
             <div
               className="img-ph"
-              style={{ aspectRatio: "3/4" }}
+              style={{ aspectRatio: "3/4", width: "100%", maxWidth: 480 }}
               data-label="BLACK TIE REFERENCE · EDITORIAL"
             />
             <div>
@@ -247,13 +232,7 @@ export default function DetailsPage() {
               >
                 {DRESS_CODE.copy}
               </p>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: 20,
-                }}
-              >
+              <div className="grid-2" style={{ gap: 20 }}>
                 <div
                   style={{
                     borderTop: "1px solid var(--ink)",
@@ -323,13 +302,7 @@ export default function DetailsPage() {
               </span>
             </h2>
             <Stagger>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(3, 1fr)",
-                  gap: 32,
-                }}
-              >
+              <div className="grid-3">
                 {HOTELS.map((h) => (
                   <StaggerItem key={h.name}>
                     <div

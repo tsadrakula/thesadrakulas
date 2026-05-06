@@ -15,18 +15,10 @@ export default function HomePage() {
 
       <section className="section">
         <FadeIn>
-          <div
-            className="container"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1.1fr",
-              gap: 80,
-              alignItems: "center",
-            }}
-          >
+          <div className="container grid-2 grid-2-wide">
             <div
               className="img-ph"
-              style={{ aspectRatio: "3/4" }}
+              style={{ aspectRatio: "3/4", width: "100%", maxWidth: 480 }}
               data-label="COUPLE PORTRAIT · FULL-LENGTH · B&W"
             />
             <div>
@@ -50,7 +42,7 @@ export default function HomePage() {
                 small hours. Ceremony at Country Club Christian Church —
                 reception immediately following at Indian Hills Country Club.
               </p>
-              <div style={{ display: "flex", gap: 16, marginTop: 40 }}>
+              <div className="hero-cta-row">
                 <Link href="/story" className="btn">
                   Our Story
                 </Link>
@@ -85,31 +77,11 @@ export default function HomePage() {
             </div>
           </FadeIn>
           <Stagger>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: `repeat(${departments.length}, 1fr)`,
-                gap: 1,
-                background: "var(--hairline)",
-              }}
-            >
+            <div className="grid-explore">
               {departments.map((d, i) => (
                 <StaggerItem key={d.href}>
-                  <Link
-                    href={d.href}
-                    style={{
-                      background: "var(--cream)",
-                      padding: "48px 20px",
-                      textAlign: "center",
-                      transition: "background 0.2s",
-                      display: "block",
-                      height: "100%",
-                    }}
-                  >
-                    <div
-                      className="eyebrow"
-                      style={{ color: "var(--muted)", marginBottom: 8 }}
-                    >
+                  <Link href={d.href} className="explore-card">
+                    <div className="eyebrow">
                       {String(i + 1).padStart(2, "0")}
                     </div>
                     <div className="display" style={{ fontSize: 26 }}>

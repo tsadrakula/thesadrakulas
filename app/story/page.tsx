@@ -58,36 +58,12 @@ export default function StoryPage() {
           const isRight = c.side === "right";
           return (
             <FadeIn key={c.number}>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: isRight ? "1fr 1.4fr" : "1.4fr 1fr",
-                  gap: 80,
-                  marginBottom: 120,
-                  alignItems: "start",
-                }}
-              >
-                {isRight ? (
-                  <>
-                    <ChapterTitle chapter={c} />
-                    <ChapterBody chapter={c} dropCap={idx === 0} />
-                  </>
-                ) : (
-                  <>
-                    <ChapterBody chapter={c} dropCap={false} />
-                    <ChapterTitle chapter={c} />
-                  </>
-                )}
+              <div className={isRight ? "story-chapter" : "story-chapter story-chapter-flip"}>
+                <ChapterTitle chapter={c} />
+                <ChapterBody chapter={c} dropCap={isRight && idx === 0} />
               </div>
               {idx === 0 && (
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(3, 1fr)",
-                    gap: 20,
-                    marginBottom: 120,
-                  }}
-                >
+                <div className="story-gallery">
                   {STORY.galleryLabels.map((label) => (
                     <div
                       key={label}

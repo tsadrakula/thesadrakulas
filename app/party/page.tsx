@@ -119,14 +119,7 @@ export default function PartyPage() {
         </FadeIn>
 
         <FadeIn>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: 40,
-              marginBottom: 120,
-            }}
-          >
+          <div className="grid-2" style={{ marginBottom: 120 }}>
             {[PRINCIPALS.bride, PRINCIPALS.groom].map((p) => (
               <div key={p.fullName}>
                 <div
@@ -208,13 +201,8 @@ export default function PartyPage() {
           </FadeIn>
           <Stagger>
             <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: 40,
-                maxWidth: 880,
-                margin: "0 auto",
-              }}
+              className="grid-2"
+              style={{ maxWidth: 880, margin: "0 auto" }}
             >
               {FAMILY.map((p) => (
                 <StaggerItem key={p.name}>
