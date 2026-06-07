@@ -221,10 +221,147 @@ input, select, textarea { font: inherit; color: inherit; }
   line-height: 1.4;
 }
 
+/* ---------- Bridal party list ---------- */
+.party-list { max-width: 640px; margin: 0 auto; }
+.party-member {
+  text-align: center;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.party-member:last-child { border-bottom: none; }
+.party-member .name {
+  font-family: var(--ff-display);
+  font-size: clamp(24px, 3.2vw, 34px);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+.party-member .role {
+  font-family: var(--ff-sans);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* Bridesmaids + groomsmen as two columns under the couple */
+.party-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  border-top: 1px solid var(--ink);
+  padding-top: 60px;
+  margin-bottom: 100px;
+}
+.party-columns .party-list { max-width: 100%; }
+@media (max-width: 760px) {
+  .party-columns { grid-template-columns: 1fr; gap: 0; }
+  .party-columns .party-column + .party-column {
+    margin-top: 48px;
+    padding-top: 48px;
+    border-top: 1px solid var(--hairline);
+  }
+}
+
+/* ---------- Homepage gallery slider ---------- */
+.gallery { max-width: 900px; margin: 0 auto; }
+.gallery-viewport {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  max-height: 72vh;
+  background: var(--paper-warm);
+  border: 1px solid var(--ink);
+}
+.gallery-track {
+  display: flex;
+  height: 100%;
+  will-change: transform;
+}
+.gallery-slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: 100%;
+}
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  background: rgba(245, 242, 236, 0.85);
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  font-family: var(--ff-display);
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s, color 0.2s;
+}
+.gallery-arrow:hover { background: var(--ink); color: var(--paper); }
+.gallery-arrow:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.gallery-arrow-prev { left: 14px; }
+.gallery-arrow-next { right: 14px; }
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 20px;
+}
+.gallery-dots button {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.gallery-dots button::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--ink);
+  background: transparent;
+  transition: background 0.2s;
+}
+.gallery-dots button.on::before { background: var(--ink); }
+.gallery-dots button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+@media (max-width: 760px) {
+  .gallery-viewport { aspect-ratio: 4 / 5; max-height: none; }
+  .gallery-arrow { width: 42px; height: 42px; }
+}
+
+/* Screen-reader-only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ---------- Registry ---------- */
 .reg-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+}
+/* Stretch each grid cell's card to equal height (percentage height is
+   unreliable inside grid items, so use flex on the cell). */
+.reg-grid > * {
+  display: flex;
+  flex-direction: column;
   gap: 24px;
 }
 .reg-card {
@@ -234,6 +371,7 @@ input, select, textarea { font: inherit; color: inherit; }
   transition: all 0.25s;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 .reg-card:hover { border-color: var(--ink); }
 .reg-card .logo {
@@ -441,7 +579,7 @@ input, select, textarea { font: inherit; color: inherit; }
 }
 .grid-explore {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1px;
   background: var(--hairline);
 }

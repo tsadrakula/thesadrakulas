@@ -43,11 +43,6 @@ export default function DetailsPage() {
         <Stagger>
           <div className="grid-2" style={{ gap: 32, marginBottom: 80 }}>
             <StaggerItem>
-              <div
-                className="img-ph"
-                style={{ aspectRatio: "4/3", marginBottom: 24 }}
-                data-label="COUNTRY CLUB CHRISTIAN CHURCH · EXTERIOR"
-              />
               <div className="event-card">
                 <div
                   className="eyebrow"
@@ -83,11 +78,6 @@ export default function DetailsPage() {
               </div>
             </StaggerItem>
             <StaggerItem>
-              <div
-                className="img-ph"
-                style={{ aspectRatio: "4/3", marginBottom: 24 }}
-                data-label="INDIAN HILLS COUNTRY CLUB · BALLROOM"
-              />
               <div className="event-card">
                 <div
                   className="eyebrow"
@@ -198,72 +188,71 @@ export default function DetailsPage() {
 
         <FadeIn>
           <div
-            className="grid-2 grid-2-wide"
-            style={{ marginBottom: 80 }}
+            style={{
+              maxWidth: 820,
+              margin: "0 auto 80px",
+              textAlign: "center",
+            }}
           >
             <div
-              className="img-ph"
-              style={{ aspectRatio: "3/4", width: "100%", maxWidth: 480 }}
-              data-label="BLACK TIE REFERENCE · EDITORIAL"
-            />
-            <div>
+              className="eyebrow"
+              style={{ color: "var(--muted)", marginBottom: 16 }}
+            >
+              ── Attire ──
+            </div>
+            <h2
+              className="display"
+              style={{
+                fontSize: "clamp(36px, 5vw, 64px)",
+                marginBottom: 24,
+                lineHeight: 1,
+              }}
+            >
+              Black tie{" "}
+              <span className="script" style={{ fontSize: "1.4em" }}>
+                optional.
+              </span>
+            </h2>
+            <p
+              className="body-serif"
+              style={{
+                color: "var(--muted)",
+                marginBottom: 32,
+                maxWidth: 620,
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            >
+              {DRESS_CODE.copy}
+            </p>
+            <div
+              className="grid-2"
+              style={{ gap: 20, maxWidth: 560, margin: "0 auto" }}
+            >
               <div
-                className="eyebrow"
-                style={{ color: "var(--muted)", marginBottom: 16 }}
+                style={{ borderTop: "1px solid var(--ink)", paddingTop: 16 }}
               >
-                ── Attire ──
-              </div>
-              <h2
-                className="display"
-                style={{
-                  fontSize: "clamp(36px, 5vw, 64px)",
-                  marginBottom: 24,
-                  lineHeight: 1,
-                }}
-              >
-                Black tie{" "}
-                <span className="script" style={{ fontSize: "1.4em" }}>
-                  required.
-                </span>
-              </h2>
-              <p
-                className="body-serif"
-                style={{ color: "var(--muted)", marginBottom: 32 }}
-              >
-                {DRESS_CODE.copy}
-              </p>
-              <div className="grid-2" style={{ gap: 20 }}>
                 <div
-                  style={{
-                    borderTop: "1px solid var(--ink)",
-                    paddingTop: 16,
-                  }}
+                  className="eyebrow"
+                  style={{ color: "var(--muted)", marginBottom: 8 }}
                 >
-                  <div
-                    className="eyebrow"
-                    style={{ color: "var(--muted)", marginBottom: 8 }}
-                  >
-                    Gentlemen
-                  </div>
-                  <div className="italic" style={{ fontSize: 17 }}>
-                    {DRESS_CODE.gentlemen}
-                  </div>
+                  Gentlemen
                 </div>
+                <div className="italic" style={{ fontSize: 17 }}>
+                  {DRESS_CODE.gentlemen}
+                </div>
+              </div>
+              <div
+                style={{ borderTop: "1px solid var(--ink)", paddingTop: 16 }}
+              >
                 <div
-                  style={{
-                    borderTop: "1px solid var(--ink)",
-                    paddingTop: 16,
-                  }}
+                  className="eyebrow"
+                  style={{ color: "var(--muted)", marginBottom: 8 }}
                 >
-                  <div
-                    className="eyebrow"
-                    style={{ color: "var(--muted)", marginBottom: 8 }}
-                  >
-                    Ladies
-                  </div>
-                  <div className="italic" style={{ fontSize: 17 }}>
-                    {DRESS_CODE.ladies}
-                  </div>
+                  Ladies
+                </div>
+                <div className="italic" style={{ fontSize: 17 }}>
+                  {DRESS_CODE.ladies}
                 </div>
               </div>
             </div>
@@ -305,32 +294,40 @@ export default function DetailsPage() {
               <div className="grid-3">
                 {HOTELS.map((h) => (
                   <StaggerItem key={h.name}>
-                    <div
+                    <a
+                      href={h.url}
+                      target="_blank"
+                      rel="noreferrer"
                       style={{
+                        display: "block",
                         textAlign: "center",
                         paddingTop: 24,
                         borderTop: "1px solid var(--ink)",
                       }}
                     >
-                      <div
-                        className="display"
-                        style={{ fontSize: 28, marginBottom: 8 }}
-                      >
+                      <div className="display" style={{ fontSize: 28, marginBottom: 8 }}>
                         {h.name}
                       </div>
-                      <div
-                        className="italic"
-                        style={{ color: "var(--muted)", marginBottom: 8 }}
-                      >
+                      <div className="italic" style={{ color: "var(--muted)", marginBottom: 8 }}>
                         {h.tag}
+                      </div>
+                      <div className="eyebrow" style={{ color: "var(--muted)", marginBottom: 14 }}>
+                        {h.address}
                       </div>
                       <div
                         className="eyebrow"
-                        style={{ color: "var(--muted)" }}
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: 8,
+                          borderBottom: "1px solid var(--ink)",
+                          paddingBottom: 4,
+                          color: "var(--ink)",
+                        }}
                       >
-                        {h.address}
+                        Visit Hotel <span style={{ fontFamily: "serif" }}>→</span>
                       </div>
-                    </div>
+                    </a>
                   </StaggerItem>
                 ))}
               </div>

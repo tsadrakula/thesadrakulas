@@ -49,3 +49,7 @@ home-*.png
 mobile-*.png
 tablet-*.png
 .env.local
+
+# root-level screenshot artifacts
+/*.jpeg
+/*.jpg
