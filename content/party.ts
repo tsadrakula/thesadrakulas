@@ -1,7 +1,7 @@
 export const BRIDESMAIDS = [
   { name: "Chloe Krause", role: "Maid of Honour" },
   { name: "Stephanie Wilcox", role: "Bridesmaid" },
-  { name: "Lauren Merrit", role: "Bridesmaid" },
+  { name: "Lauren Merritt", role: "Bridesmaid" },
   { name: "Kennedy Montgomery", role: "Bridesmaid" },
   { name: "Natalie Matchell", role: "Bridesmaid" },
   { name: "Frances Wentz", role: "Bridesmaid" },
