@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/content/site";
 
@@ -26,38 +27,38 @@ export function HomeHero() {
         minHeight: 640,
         overflow: "hidden",
         color: "#f5f2ec",
-        background:
-          "linear-gradient(180deg, #2a2520 0%, #3d3630 30%, #5a4f46 55%, #302822 85%, #1a1612 100%)",
+        background: "#1a1612",
       }}
     >
-      <svg
-        viewBox="0 0 400 300"
-        preserveAspectRatio="xMidYMid slice"
-        style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
-        aria-hidden
-      >
-        <g opacity="0.45">
-          <ellipse cx="175" cy="145" rx="22" ry="26" fill="rgba(30,25,20,0.7)" />
-          <path
-            d="M 140 300 L 145 200 Q 150 175 175 175 Q 200 175 205 200 L 210 300 Z"
-            fill="rgba(30,25,20,0.7)"
-          />
-          <ellipse cx="225" cy="140" rx="20" ry="24" fill="rgba(30,25,20,0.7)" />
-          <path
-            d="M 195 300 L 200 195 Q 205 170 225 170 Q 250 170 255 195 L 260 300 Z"
-            fill="rgba(30,25,20,0.7)"
-          />
-        </g>
-      </svg>
+      {/* Engagement photograph */}
+      <Image
+        src="/hero.jpg"
+        alt="Sydney and Trenton sharing a kiss for their engagement portraits in Kansas City."
+        fill
+        priority
+        sizes="100vw"
+        style={{ objectFit: "cover", objectPosition: "center 38%" }}
+      />
 
+      {/* Film grain */}
       <div
         style={{
           position: "absolute",
           inset: 0,
-          opacity: 0.08,
+          opacity: 0.06,
           mixBlendMode: "overlay",
           backgroundImage:
             "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E\")",
+        }}
+        aria-hidden
+      />
+      {/* Legibility overlay: darken top & bottom so the light type reads */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background:
+            "linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 35%, rgba(0,0,0,0.30) 60%, rgba(0,0,0,0.60) 100%)",
         }}
         aria-hidden
       />
@@ -66,26 +67,10 @@ export function HomeHero() {
           position: "absolute",
           inset: 0,
           background:
-            "radial-gradient(ellipse at center 55%, transparent 25%, rgba(0,0,0,0.5) 100%)",
+            "radial-gradient(ellipse at center 50%, transparent 30%, rgba(0,0,0,0.45) 100%)",
         }}
         aria-hidden
       />
-
-      <div
-        style={{
-          position: "absolute",
-          top: 14,
-          right: 14,
-          fontFamily: "Courier New, monospace",
-          fontSize: 8,
-          letterSpacing: "0.16em",
-          color: "rgba(245,242,236,0.5)",
-          padding: "4px 8px",
-          border: "1px solid rgba(245,242,236,0.3)",
-        }}
-      >
-        PHOTO PLACEHOLDER
-      </div>
 
       <motion.div
         style={
@@ -121,10 +106,10 @@ export function HomeHero() {
           style={{
             fontFamily: "var(--ff-script)",
             fontWeight: 400,
-            fontSize: "clamp(96px, 16vw, 220px)",
-            lineHeight: 0.95,
+            fontSize: "clamp(30px, 3.4vw, 40px)",
+            lineHeight: 1,
             letterSpacing: "0.01em",
-            textShadow: "0 2px 24px rgba(0,0,0,0.3)",
+            textShadow: "0 2px 18px rgba(0,0,0,0.5)",
           }}
         >
           {SITE.brideShort}{" "}
@@ -137,7 +122,7 @@ export function HomeHero() {
           style={{
             width: 60,
             height: 1,
-            background: "rgba(245,242,236,0.6)",
+            background: "rgba(245,242,236,0.7)",
             margin: "32px 0 18px",
             transformOrigin: "center",
           }}
@@ -152,19 +137,21 @@ export function HomeHero() {
             fontSize: "clamp(18px, 2vw, 24px)",
             letterSpacing: "0.16em",
             fontVariationSettings: '"opsz" 96',
+            textShadow: "0 1px 16px rgba(0,0,0,0.5)",
           }}
         >
-          {SITE.weddingDateRoman}
+          {SITE.weddingDateShort}
         </motion.div>
         <motion.div
           initial={reduce ? false : { opacity: 0 }}
-          animate={{ opacity: 0.8 }}
+          animate={{ opacity: 0.85 }}
           transition={{ duration: 0.9, delay: 0.85, ease }}
           style={{
             fontFamily: "var(--ff-sans)",
             fontSize: 10,
             letterSpacing: "0.42em",
             marginTop: 10,
+            textShadow: "0 1px 12px rgba(0,0,0,0.5)",
           }}
         >
           {SITE.city.toUpperCase()}
@@ -188,8 +175,8 @@ export function HomeHero() {
           href="/rsvp"
           style={{
             padding: "14px 32px",
-            border: "1px solid rgba(245,242,236,0.8)",
-            background: "transparent",
+            border: "1px solid rgba(245,242,236,0.85)",
+            background: "rgba(0,0,0,0.15)",
             color: "#f5f2ec",
             fontFamily: "var(--ff-sans)",
             fontSize: 10,

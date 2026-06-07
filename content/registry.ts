@@ -6,12 +6,24 @@ export type RegistryItem = {
 };
 
 export const REGISTRIES: RegistryItem[] = [
-  { name: "CRATE & BARREL", tag: "The Home", desc: "For the everyday and the entertaining — linens, table, hearth.", url: null },
-  { name: "WILLIAMS SONOMA", tag: "The Kitchen", desc: "Copper pots, heirloom knives, and Sunday suppers in mind.", url: null },
-  { name: "POTTERY BARN", tag: "The Nest", desc: "For the rooms where the quiet years will happen.", url: null },
-  { name: "BLOOMINGDALE'S", tag: "The Registry", desc: "A little of everything — a long list, carefully chosen.", url: null },
-  { name: "ZOLA", tag: "Experiences", desc: "Honeymoon contributions, restaurant nights, small adventures.", url: null },
-  { name: "THE KNOT", tag: "Cash Fund", desc: "Toward the first home — with our deepest gratitude.", url: null },
+  {
+    name: "CRATE & BARREL",
+    tag: "The Home",
+    desc: "For the everyday and the entertaining — linens, table, and hearth.",
+    url: "https://www.crateandbarrel.com/gift-registry/sydney-krause-and-trenton-sadrakula/r7554477",
+  },
+  {
+    name: "WILLIAMS SONOMA",
+    tag: "The Kitchen",
+    desc: "Copper pots, heirloom knives, and Sunday suppers in mind.",
+    url: "https://www.williams-sonoma.com/registry/l7t6lwdsd5/registry-list.html",
+  },
+  {
+    name: "HUDSON & GRACE",
+    tag: "The Table",
+    desc: "Considered pieces for gathering — glassware, candles, and the art of the table.",
+    url: "https://hudsongracesf.com/apps/giftregistry/registry/433469?_r=1&utm_source=gift_reggie&utm_medium=gift_reggie&utm_campaign=gift_reggie&utm_content=433469",
+  },
 ];
 
 export const HONEYMOON_FUND: { venmoHandle: string | null; note: string } = {
