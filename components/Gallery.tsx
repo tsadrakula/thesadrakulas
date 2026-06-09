@@ -116,23 +116,6 @@ export function Gallery({ slides }: { slides: GallerySlide[] }) {
             </div>
           ))}
         </div>
-
-        <button
-          className="gallery-arrow gallery-arrow-prev"
-          type="button"
-          onClick={prev}
-          aria-label="Previous photo"
-        >
-          <span aria-hidden="true">&larr;</span>
-        </button>
-        <button
-          className="gallery-arrow gallery-arrow-next"
-          type="button"
-          onClick={next}
-          aria-label="Next photo"
-        >
-          <span aria-hidden="true">&rarr;</span>
-        </button>
       </div>
 
       <div className="gallery-dots" aria-label="Choose a photo">
