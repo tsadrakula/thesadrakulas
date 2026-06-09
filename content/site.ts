@@ -13,7 +13,7 @@ export const SITE = {
   ceremony: {
     name: "Country Club Christian Church",
     address: "6101 Ward Parkway · Kansas City, Missouri",
-    arrival: "4:30 in the afternoon",
+    arrival: "4:45 in the afternoon",
     start: "5:00 p.m.",
     attire: "Black Tie Optional",
   },
@@ -21,10 +21,11 @@ export const SITE = {
     name: "Indian Hills Country Club",
     address: "6847 Tomahawk Road · Mission Hills, Kansas",
     start: "6:00 p.m.",
-    cocktails: "6:00 p.m.",
-    dinner: "7:00 p.m.",
-    dancing: "Until midnight",
-    farewell: "Sparkler send-off",
+    "cocktail hour": "6:00 p.m.",
+    dinner: "7:15 p.m.",
+    "speeches & first dances": "8:00 p.m.",
+    dancing: "8:30 p.m.",
+    sendoff: "11:00 p.m.",
   },
 } as const;
 

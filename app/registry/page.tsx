@@ -15,49 +15,6 @@ export default function RegistryPage() {
           </div>
         </FadeIn>
 
-        <FadeIn>
-          <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <div
-              className="eyebrow"
-              style={{ color: "var(--muted)", marginBottom: 24 }}
-            >
-              ── A Note ──
-            </div>
-            <h1
-              className="display"
-              style={{ fontSize: "clamp(56px, 9vw, 130px)", marginBottom: 28 }}
-            >
-              With{" "}
-              <span className="script" style={{ fontSize: "1.4em" }}>
-                gratitude.
-              </span>
-            </h1>
-          </div>
-        </FadeIn>
-
-        <FadeIn>
-          <div className="container-narrow" style={{ marginBottom: 100 }}>
-            <p
-              className="body-serif italic"
-              style={{
-                textAlign: "center",
-                fontSize: 22,
-                color: "var(--muted)",
-                lineHeight: 1.6,
-              }}
-            >
-              Your presence on our wedding day is the only gift we seek. For
-              those who have kindly asked, we have assembled a small registry
-              at the following — with deep thanks, and no expectation.
-            </p>
-            <div
-              style={{ display: "flex", justifyContent: "center", marginTop: 40 }}
-            >
-              <Monogram size={72} />
-            </div>
-          </div>
-        </FadeIn>
-
         <Stagger>
           <div className="reg-grid">
             {REGISTRIES.map((r) => {

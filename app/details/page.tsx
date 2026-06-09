@@ -41,7 +41,7 @@ export default function DetailsPage() {
         </FadeIn>
 
         <Stagger>
-          <div className="grid-2" style={{ gap: 32, marginBottom: 80 }}>
+          <div className="grid-2 event-grid" style={{ gap: 32, marginBottom: 80 }}>
             <StaggerItem>
               <div className="event-card">
                 <div
@@ -94,20 +94,24 @@ export default function DetailsPage() {
                 </p>
                 <ul className="event-meta">
                   <li>
-                    <span className="k">Cocktails</span>
-                    <span>{SITE.reception.cocktails}</span>
+                    <span className="k">Cocktail Hour</span>
+                    <span>{SITE.reception["cocktail hour"]}</span>
                   </li>
                   <li>
                     <span className="k">Dinner</span>
                     <span>{SITE.reception.dinner}</span>
                   </li>
                   <li>
+                    <span className="k">Speeches &amp; First Dances</span>
+                    <span>{SITE.reception["speeches & first dances"]}</span>
+                  </li>
+                  <li>
                     <span className="k">Dancing</span>
                     <span>{SITE.reception.dancing}</span>
                   </li>
                   <li>
-                    <span className="k">Farewell</span>
-                    <span>{SITE.reception.farewell}</span>
+                    <span className="k">Sendoff</span>
+                    <span>{SITE.reception.sendoff}</span>
                   </li>
                 </ul>
               </div>
@@ -291,7 +295,7 @@ export default function DetailsPage() {
               </span>
             </h2>
             <Stagger>
-              <div className="grid-3">
+              <div style={{ maxWidth: 360, margin: "0 auto" }}>
                 {HOTELS.map((h) => (
                   <StaggerItem key={h.name}>
                     <a

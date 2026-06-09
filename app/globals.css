@@ -514,6 +514,18 @@ input, select, textarea { font: inherit; color: inherit; }
   border: 1px solid var(--ink);
   padding: 48px;
   background: var(--cream);
+  height: 100%;
+}
+/* Make side-by-side event cards equal height regardless of content.
+   The framer-motion wrapper sits between the grid cell and the card, so a
+   percentage height won't resolve reliably — stretch the wrapper as a flex
+   column and let the card grow to fill it. */
+.event-grid > * {
+  display: flex;
+  flex-direction: column;
+}
+.event-grid .event-card {
+  flex: 1;
 }
 .event-card h3 {
   font-family: var(--ff-display);

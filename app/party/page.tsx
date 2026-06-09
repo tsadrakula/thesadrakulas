@@ -60,24 +60,8 @@ export default function PartyPage() {
           <div className="dept-label">
             <div className="no" />
             <div className="ti">Bridal Party</div>
-            <div className="rt">The Company We Keep</div>
           </div>
         </FadeIn>
-
-        <FadeIn>
-          <div style={{ textAlign: "center", marginBottom: 80 }}>
-            <div className="eyebrow" style={{ color: "var(--muted)", marginBottom: 24 }}>
-              ── Featured ──
-            </div>
-            <h1 className="display" style={{ fontSize: "clamp(56px, 9vw, 130px)", marginBottom: 20 }}>
-              The <span className="script" style={{ fontSize: "1.4em" }}>party.</span>
-            </h1>
-            <p className="italic" style={{ fontSize: 22, color: "var(--muted)", maxWidth: 680, margin: "0 auto" }}>
-              The small and excellent cast of friends and family standing beside us on the seventh of November.
-            </p>
-          </div>
-        </FadeIn>
-
         <FadeIn>
           <div className="grid-2" style={{ marginBottom: 100, maxWidth: 980, marginLeft: "auto", marginRight: "auto" }}>
             {[PRINCIPALS.bride, PRINCIPALS.groom].map((p) => (
