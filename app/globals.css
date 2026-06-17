@@ -461,6 +461,8 @@ input, select, textarea { font: inherit; color: inherit; }
 .invite-result-name { font-family: var(--ff-display); font-size: 19px; }
 .invite-result-sub { font-family: var(--ff-sans); font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
 .invite-result-arrow { font-family: var(--ff-display); font-size: 22px; color: var(--muted); }
+.invite-result.is-responded { opacity: 0.5; cursor: default; }
+.invite-result.is-responded:hover { border-color: var(--hairline); background: var(--paper); }
 
 .rsvp-nav { display: flex; justify-content: space-between; gap: 16px; margin-top: 36px; }
 .rsvp-dots { display: flex; gap: 6px; justify-content: center; margin-top: 24px; }
