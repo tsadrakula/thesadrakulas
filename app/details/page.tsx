@@ -1,7 +1,7 @@
 import { FadeIn } from "@/components/motion/FadeIn";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 import { SITE } from "@/content/site";
-import { SCHEDULE, HOTELS, DRESS_CODE } from "@/content/details";
+import { SCHEDULE, HOTELS, ADULTS_ONLY } from "@/content/details";
 
 export default function DetailsPage() {
   return (
@@ -208,7 +208,7 @@ export default function DetailsPage() {
               className="display"
               style={{
                 fontSize: "clamp(36px, 5vw, 64px)",
-                marginBottom: 24,
+                marginBottom: 0,
                 lineHeight: 1,
               }}
             >
@@ -217,49 +217,49 @@ export default function DetailsPage() {
                 optional.
               </span>
             </h2>
+          </div>
+        </FadeIn>
+
+        <FadeIn>
+          <div
+            style={{
+              maxWidth: 820,
+              margin: "0 auto 80px",
+              textAlign: "center",
+              paddingTop: 80,
+              borderTop: "1px solid var(--hairline)",
+            }}
+          >
+            <div
+              className="eyebrow"
+              style={{ color: "var(--muted)", marginBottom: 16 }}
+            >
+              ── A Gentle Note ──
+            </div>
+            <h2
+              className="display"
+              style={{
+                fontSize: "clamp(36px, 5vw, 64px)",
+                marginBottom: 24,
+                lineHeight: 1,
+              }}
+            >
+              An adults-only{" "}
+              <span className="script" style={{ fontSize: "1.4em" }}>
+                evening.
+              </span>
+            </h2>
             <p
               className="body-serif"
               style={{
                 color: "var(--muted)",
-                marginBottom: 32,
                 maxWidth: 620,
                 marginLeft: "auto",
                 marginRight: "auto",
               }}
             >
-              {DRESS_CODE.copy}
+              {ADULTS_ONLY.copy}
             </p>
-            <div
-              className="grid-2"
-              style={{ gap: 20, maxWidth: 560, margin: "0 auto" }}
-            >
-              <div
-                style={{ borderTop: "1px solid var(--ink)", paddingTop: 16 }}
-              >
-                <div
-                  className="eyebrow"
-                  style={{ color: "var(--muted)", marginBottom: 8 }}
-                >
-                  Gentlemen
-                </div>
-                <div className="italic" style={{ fontSize: 17 }}>
-                  {DRESS_CODE.gentlemen}
-                </div>
-              </div>
-              <div
-                style={{ borderTop: "1px solid var(--ink)", paddingTop: 16 }}
-              >
-                <div
-                  className="eyebrow"
-                  style={{ color: "var(--muted)", marginBottom: 8 }}
-                >
-                  Ladies
-                </div>
-                <div className="italic" style={{ fontSize: 17 }}>
-                  {DRESS_CODE.ladies}
-                </div>
-              </div>
-            </div>
           </div>
         </FadeIn>
 

@@ -17,8 +17,6 @@ export const HOTELS = [
   },
 ] as const;
 
-export const DRESS_CODE = {
-  copy: "Black tie optional. Gentlemen are invited to wear a tuxedo or a dark suit; ladies, a floor-length gown or an elegant cocktail dress. The palette of the evening is black and white — guests are warmly invited to echo it, though never required.",
-  gentlemen: "Tuxedo or dark suit · Tie optional",
-  ladies: "Floor-length gown or cocktail dress",
+export const ADULTS_ONLY = {
+  copy: "We adore your little ones — truly. To let every guest relax, raise a glass, and dance the night away, we've reserved this evening for adults only. We hope you'll embrace it as a rare night out, and join us in making this moment ours to celebrate.",
 };
