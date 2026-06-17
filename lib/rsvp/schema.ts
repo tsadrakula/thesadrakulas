@@ -29,6 +29,9 @@ export const Party = z.object({
   partyId: z.string(),
   partyLabel: z.string(),
   members: z.array(GuestRow).min(1),
+  // True when this party has already submitted an RSVP (set live at lookup time;
+  // not part of the static mirror).
+  submitted: z.boolean().optional(),
 });
 export type Party = z.infer<typeof Party>;
 

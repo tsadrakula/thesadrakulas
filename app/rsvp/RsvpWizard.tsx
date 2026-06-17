@@ -238,26 +238,45 @@ export function RsvpWizard() {
                   </div>
                 ) : matches.length > 0 ? (
                   <div style={{ display: "grid", gap: 8 }}>
-                    {matches.map((m) => (
-                      <button
-                        key={m.partyId}
-                        type="button"
-                        onClick={() => selectParty(m)}
-                        className="invite-result"
-                      >
-                        <div>
-                          <div className="invite-result-name">
-                            {m.members.map((g) => `${g.firstName} ${g.lastName}`).join(" & ")}
+                    {matches.map((m) => {
+                      const names = m.members
+                        .map((g) => `${g.firstName} ${g.lastName}`)
+                        .join(" & ");
+                      if (m.submitted) {
+                        return (
+                          <div
+                            key={m.partyId}
+                            className="invite-result is-responded"
+                            aria-disabled="true"
+                            title="This party has already responded."
+                          >
+                            <div>
+                              <div className="invite-result-name">{names}</div>
+                              <div className="invite-result-sub">Already responded</div>
+                            </div>
+                            <span className="invite-result-arrow">✓</span>
                           </div>
-                          <div className="invite-result-sub">
-                            {m.members.length === 1
-                              ? "One guest"
-                              : `${m.members.length} guests`}
+                        );
+                      }
+                      return (
+                        <button
+                          key={m.partyId}
+                          type="button"
+                          onClick={() => selectParty(m)}
+                          className="invite-result"
+                        >
+                          <div>
+                            <div className="invite-result-name">{names}</div>
+                            <div className="invite-result-sub">
+                              {m.members.length === 1
+                                ? "One guest"
+                                : `${m.members.length} guests`}
+                            </div>
                           </div>
-                        </div>
-                        <span className="invite-result-arrow">→</span>
-                      </button>
-                    ))}
+                          <span className="invite-result-arrow">→</span>
+                        </button>
+                      );
+                    })}
                   </div>
                 ) : (
                   <div
