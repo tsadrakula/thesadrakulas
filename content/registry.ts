@@ -1,7 +1,6 @@
 export type RegistryItem = {
   name: string;
   tag: string;
-  desc: string;
   url: string | null;
 };
 
@@ -9,19 +8,16 @@ export const REGISTRIES: RegistryItem[] = [
   {
     name: "CRATE & BARREL",
     tag: "The Home",
-    desc: "For the everyday and the entertaining — linens, table, and hearth.",
     url: "https://www.crateandbarrel.com/gift-registry/sydney-krause-and-trenton-sadrakula/r7554477",
   },
   {
     name: "WILLIAMS SONOMA",
     tag: "The Kitchen",
-    desc: "Copper pots, heirloom knives, and Sunday suppers in mind.",
     url: "https://www.williams-sonoma.com/registry/l7t6lwdsd5/registry-list.html",
   },
   {
     name: "HUDSON & GRACE",
     tag: "The Table",
-    desc: "Considered pieces for gathering — glassware, candles, and the art of the table.",
     url: "https://hudsongracesf.com/apps/giftregistry/registry/433469?_r=1&utm_source=gift_reggie&utm_medium=gift_reggie&utm_campaign=gift_reggie&utm_content=433469",
   },
 ];

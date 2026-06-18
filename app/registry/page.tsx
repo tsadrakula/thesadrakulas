@@ -45,7 +45,6 @@ export default function RegistryPage() {
                       {r.tag}
                     </div>
                     <div className="logo">{r.name}</div>
-                    <p className="desc">{r.desc}</p>
                     <div
                       className="eyebrow"
                       style={{
