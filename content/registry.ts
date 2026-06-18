@@ -23,6 +23,6 @@ export const REGISTRIES: RegistryItem[] = [
 ];
 
 export const HONEYMOON_FUND: { venmoHandle: string | null; note: string } = {
-  venmoHandle: null,
+  venmoHandle: "Sydkrause",
   note: "For those who would prefer, a contribution toward our honeymoon — the first chapter of our life together.",
 };
