@@ -276,6 +276,8 @@ export const GUEST_ROSTER: Omit<GuestRow, "rowIndex">[] = [
   { partyId: "P-139", partyLabel: "Chris Nothnick & Maddy Green", firstName: "Chris", lastName: "Nothnick", relationship: "primary", side: "bride" },
   { partyId: "P-139", partyLabel: "Chris Nothnick & Maddy Green", firstName: "Maddy", lastName: "Green", relationship: "spouse", side: "bride" },
   { partyId: "P-078", partyLabel: "Brooke Rosen", firstName: "Bret", lastName: "Hughes", relationship: "plus-one", side: "bride" },
+  { partyId: "P-140", partyLabel: "Karrie Cunningham", firstName: "Karrie", lastName: "Cunningham", relationship: "primary", side: "bride" },
+  { partyId: "P-140", partyLabel: "Karrie Cunningham", firstName: "Nick", lastName: "Privitera", relationship: "plus-one", side: "bride" },
 ];
 
 export function getRosterGuests(): GuestRow[] {
