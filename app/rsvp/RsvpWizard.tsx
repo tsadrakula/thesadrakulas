@@ -330,19 +330,6 @@ export function RsvpWizard() {
                     }}
                   >
                     {a.firstName} {a.lastName}
-                    {a.relationship === "plus-one" && (
-                      <span
-                        className="eyebrow"
-                        style={{
-                          display: "block",
-                          marginTop: 4,
-                          color: "var(--muted)",
-                          fontSize: 9,
-                        }}
-                      >
-                        Plus-one
-                      </span>
-                    )}
                   </div>
                 ))}
                 <div
@@ -404,7 +391,6 @@ export function RsvpWizard() {
                         }}
                       >
                         For {g.firstName}
-                        {g.relationship === "plus-one" && " (plus-one)"}
                       </div>
                     )}
                     <div className="choice-row">
