@@ -13,7 +13,7 @@ export const HOTELS = [
     name: "Sheraton Overland Park",
     tag: "At the Convention Center",
     address: "6100 College Blvd, Overland Park",
-    url: "https://www.marriott.com/en-us/hotels/mcicc-sheraton-overland-park-hotel-at-the-convention-center/overview/",
+    url: "https://app.marriott.com/reslink?id=1770495976192&key=GRP&app=resvlink",
   },
 ] as const;
 
