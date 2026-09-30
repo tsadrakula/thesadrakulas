@@ -280,6 +280,12 @@ export const GUEST_ROSTER: Omit<GuestRow, "rowIndex">[] = [
   { partyId: "P-140", partyLabel: "Karrie Cunningham", firstName: "Nick", lastName: "Privitera", relationship: "plus-one", side: "bride" },
   { partyId: "P-141", partyLabel: "The McAnanys", firstName: "Ben", lastName: "McAnany", relationship: "primary", side: "groom" },
   { partyId: "P-141", partyLabel: "The McAnanys", firstName: "Susan", lastName: "McAnany", relationship: "spouse", side: "groom" },
+  { partyId: "P-086", partyLabel: "Mackenzie Sweat", firstName: "Ben", lastName: "Sight", relationship: "plus-one", side: "bride" },
+  { partyId: "P-122", partyLabel: "Jaxen Conejo", firstName: "Isabel", lastName: "Basurto", relationship: "plus-one", side: "groom" },
+  { partyId: "P-142", partyLabel: "Michael Crawford", firstName: "Michael", lastName: "Crawford", relationship: "primary", side: "groom" },
+  { partyId: "P-142", partyLabel: "Michael Crawford", firstName: "Jessica", lastName: "Crawford", relationship: "spouse", side: "groom" },
+  { partyId: "P-143", partyLabel: "Caroline Finnerty", firstName: "Caroline", lastName: "Finnerty", relationship: "primary", side: "groom" },
+  { partyId: "P-143", partyLabel: "Caroline Finnerty", firstName: "Cody", lastName: "Lacey", relationship: "plus-one", side: "groom" },
 ];
 
 export function getRosterGuests(): GuestRow[] {
